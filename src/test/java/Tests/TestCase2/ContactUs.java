@@ -20,8 +20,7 @@ public class ContactUs extends TestBase {
         homePageActions = new HomePageActions(driver);
         navBarActions = new NavBarActions(driver);
         contactUsActions = new ContactUsActions(driver);
-    }
-//
+
     public void navigateToUrl() {
         homePageActions.navigateToHomePage(url);
     }
