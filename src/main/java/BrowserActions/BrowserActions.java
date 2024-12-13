@@ -1,5 +1,6 @@
 package BrowserActions;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,5 +45,10 @@ public class BrowserActions {
     }
     public void navigateToURl(String url){
         driver.get(url);
+    }
+
+    public void acceptAlert() {
+        Alert alert = driver.switchTo().alert(); // Switch to the alert
+        alert.accept(); // Accept the alert
     }
 }
