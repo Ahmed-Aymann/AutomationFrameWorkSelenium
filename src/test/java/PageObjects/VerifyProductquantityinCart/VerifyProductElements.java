@@ -7,7 +7,7 @@ public class VerifyProductElements {
     By homePageVisibleElement =By.xpath("//div[@id='slider-carousel']//div[@class='carousel-inner']");
 
     // Locators for viewing product
-    By viewProductButton = By.xpath("//a[(text()='View Product')]");
+    By viewProductButton = By.xpath("//a[contains(text(),'View Product')]");
     By productDetailPage = By.xpath("//div[@class='product-information']");
 
     // Locators for product actions
