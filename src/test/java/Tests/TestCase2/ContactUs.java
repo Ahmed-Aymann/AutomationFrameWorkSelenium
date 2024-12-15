@@ -6,8 +6,12 @@ import PageObjects.NavBar.NavBarActions;
 import PageObjects.ContactUs.ContactUsActions;
 import Tests.TestBase;
 import Utilities.Utilities;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.io.File;
 
 public class ContactUs extends TestBase {
     HomePageActions homePageActions;
@@ -47,7 +51,18 @@ public class ContactUs extends TestBase {
         contactUsActions.fillContactForm(name, email, subject, message);
 
         // Step 6: Upload file
-      //  contactUsActions.uploadFile("src/test/resources/test_file.txt");
+       // uploadFile(){}
+      //  contactUsActions.uploadFile("C:\Users\lEGION\OneDrive\Desktop\Doc1.docx");
+        WebElement fileInput = driver.findElement(By.xpath("//input[@name=\"upload_file\"]")); // Replace with actual ID or locator for the file input
+        File fileToUpload = new File("C:\\Users\\lEGION\\OneDrive\\Desktop\\Acud_Bug.docx");
+
+
+        if (fileToUpload.exists()) {
+            fileInput.sendKeys(fileToUpload.getAbsolutePath());
+        } else {
+            System.out.println("File not found: " + fileToUpload.getAbsolutePath());
+            return;
+        }
 
         // Step 7: Submit the form
         contactUsActions.clickSubmitButton();

@@ -3,6 +3,9 @@ package PageObjects.ContactUs;
 import Assertions.Assertion;
 import BrowserActions.BrowserActions;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.io.File;
 
 public class ContactUsActions extends ContactUsElements {
     BrowserActions browserActions;
@@ -20,9 +23,20 @@ public class ContactUsActions extends ContactUsElements {
         browserActions.type(MessageInput, message);
     }
 
-    public void uploadFile(String filePath) {
-        browserActions.type(UploadFileInput, filePath);
-    }
+  /* public void uploadFile(String filePath) {
+       //browserActions.type(UploadFileInput, filePath);
+        browserActions.click(FileInput);
+        File fileToUpload = new File(filePath);
+
+
+        if (fileToUpload.exists()) {
+            fileToUpload.getAbsolutePath();
+        } else {
+            System.out.println("File not found: " + fileToUpload.getAbsolutePath());
+            return;
+        }
+
+    }*/
 
     public void clickSubmitButton() {
         browserActions.click(SubmitButton);
