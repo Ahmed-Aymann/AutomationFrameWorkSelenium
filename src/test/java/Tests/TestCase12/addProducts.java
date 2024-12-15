@@ -50,10 +50,5 @@ public class addProducts extends TestBase {
         Assert.assertEquals(secondProductPrice, "Rs. 400", "Second product price is incorrect!");
         Assert.assertEquals(secondProductQuantity, "1", "Second product quantity is incorrect!");
         Assert.assertEquals(secondProductTotal, "Rs. 400", "Second product total is incorrect!");
-
-
     }
-
-
-
 }
