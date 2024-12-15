@@ -8,18 +8,19 @@ public class AddProductElements {
     By homePageVisibleElement =By.xpath("//div[@id='slider-carousel']//div[@class='carousel-inner']");
 
     // Locators for first product
-    By FirstProduct = By.xpath("//a[@data-product-id='1'']");
+    By FirstProduct = By.xpath("//a[@data-product-id='1']");
     By addToCartFirstProduct  = By.xpath("//*[@id='product-1']");
 
     // Locators for second product
-    By SecondProduct = By.xpath("//a[@data-product-id='2'']");
+    By SecondProduct = By.xpath("//a[@data-product-id='2']");
     By addToCartSecondProduct   = By.xpath("//*[@id='product-2']");
 
     // Locators for navigation
-    By productsButton = By.xpath("//a[text()='products']");
+    By productsButton = By.xpath("//a[contains(text(),'Products')]");
 
     // Locator for 'Continue Shopping' button
     By continueShoppingButton = By.xpath("//button[text()='Continue Shopping']");
+    //By continueShoppingButton = By.xpath("//button[@class='btn btn-success close-modal btn-block' and @data-dismiss='modal']");
 
     // Locator for 'View Cart' button
     By viewCartButton = By.xpath("//a//u[text()='View Cart']");

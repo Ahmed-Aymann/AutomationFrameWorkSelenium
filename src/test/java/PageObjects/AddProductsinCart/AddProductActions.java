@@ -5,6 +5,9 @@ import BrowserActions.BrowserActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class AddProductActions extends AddProductElements{
     BrowserActions browserActions;
@@ -13,6 +16,7 @@ public class AddProductActions extends AddProductElements{
         browserActions = new BrowserActions(driver);
         assertion = new Assertion(driver);
     }
+
     public void navigateToUrl(String url){
         browserActions.navigateToURl(url);
     }
