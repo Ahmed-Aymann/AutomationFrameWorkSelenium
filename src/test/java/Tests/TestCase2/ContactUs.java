@@ -51,18 +51,8 @@ public class ContactUs extends TestBase {
         contactUsActions.fillContactForm(name, email, subject, message);
 
         // Step 6: Upload file
-       // uploadFile(){}
-      //  contactUsActions.uploadFile("C:\Users\lEGION\OneDrive\Desktop\Doc1.docx");
-        WebElement fileInput = driver.findElement(By.xpath("//input[@name=\"upload_file\"]")); // Replace with actual ID or locator for the file input
-        File fileToUpload = new File("C:\\Users\\lEGION\\OneDrive\\Desktop\\Acud_Bug.docx");
-
-
-        if (fileToUpload.exists()) {
-            fileInput.sendKeys(fileToUpload.getAbsolutePath());
-        } else {
-            System.out.println("File not found: " + fileToUpload.getAbsolutePath());
-            return;
-        }
+       String filepath = "C:\\Users\\lEGION\\OneDrive\\Desktop\\Acud_Bug.docx";
+        contactUsActions.uploadFileUsingRobot(filepath);
 
         // Step 7: Submit the form
         contactUsActions.clickSubmitButton();
