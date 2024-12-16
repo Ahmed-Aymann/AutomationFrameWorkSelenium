@@ -9,18 +9,22 @@ public class AddProductElements {
 
     // Locators for first product
     By FirstProduct = By.xpath("//a[@data-product-id='1']");
-    By addToCartFirstProduct  = By.xpath("//*[@id='product-1']");
+    By addToCartFirstProduct  = By.xpath("//a[@data-product-id='1' and contains(@class, 'btn btn-default add-to-cart')]");
+
 
     // Locators for second product
     By SecondProduct = By.xpath("//a[@data-product-id='2']");
-    By addToCartSecondProduct   = By.xpath("//*[@id='product-2']");
+    By addToCartSecondProduct   = By.xpath("//a[@data-product-id='2' and contains(@class, 'btn btn-default add-to-cart')]");
 
     // Locators for navigation
     By productsButton = By.xpath("//a[contains(text(),'Products')]");
 
     // Locator for 'Continue Shopping' button
-    By continueShoppingButton = By.xpath("//button[text()='Continue Shopping']");
+    //By continueShoppingButton = By.xpath("//button[text()='Continue Shopping']");
     //By continueShoppingButton = By.xpath("//button[@class='btn btn-success close-modal btn-block' and @data-dismiss='modal']");
+    By continueShoppingButton = By.xpath("//button[@class='btn btn-success close-modal btn-block']");
+
+
 
     // Locator for 'View Cart' button
     By viewCartButton = By.xpath("//a//u[text()='View Cart']");

@@ -27,15 +27,14 @@ public class AddProductActions extends AddProductElements{
     public void clickProductsButton() {
         browserActions.click(productsButton);
     }
-    public void hoverAndAddFirstProductToCart() {
-        browserActions.waitUntilElementIsReady(FirstProduct).click();
+    public void AddFirstProductToCart() {
         browserActions.click(addToCartFirstProduct);
     }
+
     public void clickContinueShopping() {
         browserActions.click(continueShoppingButton);
     }
-    public void hoverAndAddSecondProductToCart() {
-        browserActions.waitUntilElementIsReady(SecondProduct).click();
+    public void addSecondProductToCart() {
         browserActions.click(addToCartSecondProduct);
     }
     public void clickViewCartButton() {

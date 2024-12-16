@@ -25,11 +25,11 @@ public class addProducts extends TestBase {
         // Step 3: Click 'Products' button
         addProductActions.clickProductsButton();
         // Step 4: Hover over first product and click 'Add to cart'
-        addProductActions.hoverAndAddFirstProductToCart();
+        addProductActions.AddFirstProductToCart();
         // Step 5: Click 'Continue Shopping'
         addProductActions.clickContinueShopping();
         // Step 6: Hover over second product and click 'Add to cart'
-        addProductActions.hoverAndAddSecondProductToCart();
+        addProductActions.addSecondProductToCart();
         // Step 7: Click 'View Cart' button
         addProductActions.clickViewCartButton();
         // Step 8: Verify both products are added to Cart
