@@ -15,13 +15,11 @@ public class NavBarActions extends NavBarElements {
     public void clickSignUpLoginButton(){
         browserActions.click(SignUpLoginButton);
     }
-    public void clickProductButton(){
-        browserActions.click(ProductButton);
+    public void clickCartButton(){
+        browserActions.click(CART_BUTTON);
     }
-
-
-
-
-
+    public void clickProductButton(){
+        browserActions.click(PRODUCTS_BUTTON);
+    }
 
 }
