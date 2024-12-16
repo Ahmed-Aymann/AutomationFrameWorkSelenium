@@ -51,17 +51,14 @@ public class ContactUs extends TestBase {
         contactUsActions.fillContactForm(name, email, subject, message);
 
         // Step 6: Upload file
-       // uploadFile(){}
-      //  contactUsActions.uploadFile("C:\Users\lEGION\OneDrive\Desktop\Doc1.docx");
-        WebElement fileInput = driver.findElement(By.xpath("//input[@name=\"upload_file\"]")); // Replace with actual ID or locator for the file input
-        File fileToUpload = new File("C:\\Users\\lEGION\\OneDrive\\Desktop\\Acud_Bug.docx");
+        String filePath = "C:/Users/lenovo/IdeaProjects/AutomationFrameWorkSelenium/arget/images.png"; // put the path of the file u uploaded in the target file
 
-
-        if (fileToUpload.exists()) {
-            fileInput.sendKeys(fileToUpload.getAbsolutePath());
+        // Checking if the file exists before proceeding
+        if (new File(filePath).exists()) {
+            contactUsActions.uploadFileUsingRobot(filePath); // Call the upload method
+            System.out.println("File uploaded successfully!");
         } else {
-            System.out.println("File not found: " + fileToUpload.getAbsolutePath());
-            return;
+            System.out.println("File not found: " + filePath);
         }
 
         // Step 7: Submit the form

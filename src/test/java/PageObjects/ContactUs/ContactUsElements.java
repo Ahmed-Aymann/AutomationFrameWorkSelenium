@@ -14,7 +14,6 @@ public class ContactUsElements {
     By SubmitButton = By.xpath("//input[@data-qa='submit-button']");
     By SuccessMessage = By.xpath("//div[@class='status alert alert-success']");
     By FileInput = By.xpath("//input[@name=\"upload_file\"]");
-   // @FindBy(xpath = "//input[@name=\"upload_file\"]")
-    //public WebElement FileInput;
+    By UPLOAD_BUTTON = By.xpath("//input[@name='upload_file']");
 
 }
