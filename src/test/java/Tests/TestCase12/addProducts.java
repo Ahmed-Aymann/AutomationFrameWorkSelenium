@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class addProducts extends TestBase {
+public class addProducts extends TestBase{
     String url = Config.getProperty("URL");
     AddProductActions  addProductActions;
 
@@ -25,7 +25,7 @@ public class addProducts extends TestBase {
         // Step 3: Click 'Products' button
         addProductActions.clickProductsButton();
         // Step 4: Hover over first product and click 'Add to cart'
-        addProductActions.AddFirstProductToCart();
+        addProductActions.addFirstProductToCart();
         // Step 5: Click 'Continue Shopping'
         addProductActions.clickContinueShopping();
         // Step 6: Hover over second product and click 'Add to cart'

@@ -27,7 +27,7 @@ public class AddProductActions extends AddProductElements{
     public void clickProductsButton() {
         browserActions.click(productsButton);
     }
-    public void AddFirstProductToCart() {
+    public void addFirstProductToCart() {
         browserActions.click(addToCartFirstProduct);
     }
 

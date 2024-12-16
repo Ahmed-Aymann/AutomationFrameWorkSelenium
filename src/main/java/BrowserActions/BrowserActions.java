@@ -52,4 +52,10 @@ public class BrowserActions {
         Alert alert = driver.switchTo().alert(); // Switch to the alert
         alert.accept(); // Accept the alert
     }
+    // New scrollTillElement method
+    public void scrollTillElement(By locator) {
+        WebElement element = waitUntilElementIsReady(locator); // Wait until the element is present
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element); // Scroll to the element
+    }
 }
