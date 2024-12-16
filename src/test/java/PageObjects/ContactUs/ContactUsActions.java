@@ -5,6 +5,9 @@ import BrowserActions.BrowserActions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 
 public class ContactUsActions extends ContactUsElements {
@@ -37,6 +40,29 @@ public class ContactUsActions extends ContactUsElements {
         }
 
     }*/
+
+    public void uploadFileUsingRobot(String filePath) {
+        try {
+
+            browserActions.click(FileInput);
+
+            Robot robot = new Robot();
+            robot.setAutoDelay(2000);
+
+            StringSelection fileLocation = new StringSelection(filePath);
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(fileLocation, null);
+
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+        } catch (Exception e) {
+            System.out.println("Error during file upload: " + e.getMessage());
+        }
+    }
 
     public void clickSubmitButton() {
         browserActions.click(SubmitButton);
