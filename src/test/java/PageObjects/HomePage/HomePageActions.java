@@ -18,3 +18,5 @@ public class HomePageActions extends HomePageElements {
         assertion.assertElementIsDisplayed(Title);
     }
 }
+
+
