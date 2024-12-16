@@ -51,7 +51,7 @@ public class ContactUs extends TestBase {
         contactUsActions.fillContactForm(name, email, subject, message);
 
         // Step 6: Upload file
-       String filepath = "C:\\Users\\lEGION\\OneDrive\\Desktop\\Acud_Bug.docx";
+        String filepath = "F:\\Automation_Projects2\\AutomationFrameWorkSelenium\\target\\Acud_Bug.docx";
         contactUsActions.uploadFileUsingRobot(filepath);
 
         // Step 7: Submit the form
