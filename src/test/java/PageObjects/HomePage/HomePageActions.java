@@ -12,7 +12,7 @@ public class HomePageActions extends HomePageElements {
         browserActions = new BrowserActions(driver);
     }
     public void navigateToHomePage(String url){
-    browserActions.navigateToURl(url);
+        browserActions.navigateToURl(url);
     }
     public void validateHomePageTitleIsDisplayed(){
         assertion.assertElementIsDisplayed(Title);

@@ -12,8 +12,7 @@ public class NavBarActions extends NavBarElements {
         browserActions = new BrowserActions(driver);
         assertion = new Assertion(driver);
     }
-
-    public void clickSignUpLoginButton() {
+    public void clickSignUpLoginButton(){
         browserActions.click(SignUpLoginButton);
     }
 
@@ -24,4 +23,11 @@ public class NavBarActions extends NavBarElements {
     public void clickHomeButton() {
         browserActions.click(HomeButton);
     }
+    public void clickCartButton(){
+        browserActions.click(CART_BUTTON);
+    }
+    public void clickProductButton(){
+        browserActions.click(PRODUCTS_BUTTON);
+    }
+
 }
