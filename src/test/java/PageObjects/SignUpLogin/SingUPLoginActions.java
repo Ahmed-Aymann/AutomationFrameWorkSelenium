@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 public class SingUPLoginActions extends SingUPLoginElements {
     BrowserActions browserActions;
     Assertion assertion;
-
+    WebDriver driver;
     public SingUPLoginActions(WebDriver driver) {
         browserActions = new BrowserActions(driver);
         assertion = new Assertion(driver);
@@ -27,5 +27,9 @@ public class SingUPLoginActions extends SingUPLoginElements {
 
     public void validateNewUserSignUpTitleIsDisplayed() {
         assertion.assertElementIsDisplayed(NewUserSignUpTitle);
+    }
+    public void clickRegisterLogin() {
+
+        browserActions.click(registerLoginButton);
     }
 }

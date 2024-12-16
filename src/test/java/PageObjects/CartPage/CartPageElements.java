@@ -12,7 +12,7 @@ public class CartPageElements {
     By CART_INFO=By.xpath("//div[@id='cart_info']");
 
 
-
+    By proceedToCheckoutButton = By.xpath("//*[@id=\"do_action\"]/div[1]/div/div/a");
 
     /*
     //dynamic locator law kont h add aktar mn element bs mafesh message when remove element mn kza haga

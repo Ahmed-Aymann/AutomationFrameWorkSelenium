@@ -7,4 +7,5 @@ public class SingUPLoginElements {
     By SignUPUserNameInput=By.xpath("//input[@data-qa='signup-name']");
     By SignUPEmailInput=By.xpath("//input[@data-qa='signup-email']");
     By SignUpButton=By.xpath("//button[@data-qa='signup-button']");
+    By registerLoginButton = By.xpath("//*[@id=\"checkoutModal\"]/div/div/div[2]/p[2]/a/u");
 }

@@ -36,7 +36,10 @@ public class CartPageActions extends CartPageElements{
         assertion.assertElementIsDisplayed(MESSAGE_OF_EMPTY_CART);
     }
 
+    public void clickProceedToCheckout() {
 
+        browserActions.click(proceedToCheckoutButton);
+    }
 
 
 
