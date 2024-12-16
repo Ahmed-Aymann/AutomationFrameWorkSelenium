@@ -16,5 +16,6 @@ public class ContactUsElements {
     By FileInput = By.xpath("//input[@name=\"upload_file\"]");
    // @FindBy(xpath = "//input[@name=\"upload_file\"]")
     //public WebElement FileInput;
+   By UPLOAD_BUTTON = By.xpath("//input[@name='upload_file']");
 
 }
