@@ -1,4 +1,4 @@
-package Tests.Testcase23;
+package Tests.TestCase23;
 
 import Config.Config;
 import PageObjects.HomePage.HomePageActions;
