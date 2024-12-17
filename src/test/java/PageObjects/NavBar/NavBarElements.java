@@ -12,5 +12,13 @@ public class NavBarElements {
     By CART_BUTTON = By.xpath("//a[@href='/view_cart']");
     By PRODUCTS_BUTTON = By.xpath("//a[@href='/products']");
 
+    //locator for delete account in the navbar
+    By DELETE_ACCOUNT_BUTTON = By.xpath("//a[@href='/delete_account']");
+
+
+
+
+
+
 
 }

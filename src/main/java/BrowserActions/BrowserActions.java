@@ -40,6 +40,7 @@ public class BrowserActions {
         element.sendKeys(text);
     }
 
+
     public String getText(By locator) {
         WebElement element = waitUntilElementIsReady(locator);
         return element.getText();

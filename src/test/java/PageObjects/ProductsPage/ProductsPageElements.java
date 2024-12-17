@@ -27,6 +27,7 @@ public class ProductsPageElements {
 
 
     public By getBrandLocator(String brandName) {
+
         return By.xpath("//a[@href='/brand_products/" + brandName + "']");
     }
 
