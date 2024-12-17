@@ -11,22 +11,28 @@ public class CartPageElements {
     By MESSAGE_OF_EMPTY_CART=By.xpath("//span[@id='empty_cart']");
     By CART_INFO=By.xpath("//div[@id='cart_info']");
 
-
+    By placeOrderButton = By.xpath("//a[contains(text(), 'Place Order')]");
     By proceedToCheckoutButton = By.xpath("//*[@id=\"do_action\"]/div[1]/div/div/a");
 
-    /*
-    //dynamic locator law kont h add aktar mn element bs mafesh message when remove element mn kza haga
 
+    By commentTextArea = By.name("message");
 
-        // Dynamic locator for a specific product row in the cart
-        public By getProductRow(String productId) {
-            return By.xpath("//tr[@id='product-" + productId + "']");
-        }
+    // Payment Details
+    By nameOnCardField = By.name("name_on_card");
+    By cardNumberField = By.name("card_number");
+    By cvcField = By.name("cvc");
+    By expirationMonthField = By.name("expiry_month");
+    By expirationYearField = By.name("expiry_year");
 
-        // Dynamic locator for the remove button based on product ID
-        public By getRemoveButton(String productId) {
-            return By.xpath("//a[@data-product-id='" + productId + "']");
-        }*/
+    By payAndConfirmButton = By.id("submit");
 
+    // Success Message
+    By successMessage = By.xpath("//p[contains(text(), 'Your order has been placed successfully!')]");
+    By downloadInvoiceButton = By.xpath("//a[contains(text(), 'Download Invoice')]");
+     By continueButton = By.xpath("//a[contains(text(), 'Continue')]");
+     By deleteAccountButton = By.xpath("//a[contains(text(), 'Delete Account')]");
+
+    // Success Message
+     By accountDeletedMessage = By.xpath("//h2[contains(text(), 'ACCOUNT DELETED!')]");
 
 }

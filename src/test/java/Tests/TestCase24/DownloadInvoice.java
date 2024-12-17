@@ -5,6 +5,7 @@ import PageObjects.AddProductsinCart.AddProductActions;
 import PageObjects.CartPage.CartPageActions;
 import PageObjects.HomePage.HomePageActions;
 import PageObjects.NavBar.NavBarActions;
+import PageObjects.OrderPage.OrderPageActions;
 import PageObjects.SignUpLogin.SingUPLoginActions;
 import PageObjects.TestCase.TestCasesActions;
 import Tests.TestBase;
@@ -20,6 +21,21 @@ public class DownloadInvoice  extends TestBase {
     NavBarActions navbarActions;
     CartPageActions cartPageActions;
     SingUPLoginActions signUpLoginActions;
+    OrderPageActions orderPageActions;
+
+    String userName = Utilities.generateRandomString(7);
+    String email = Utilities.generateRandomString(7) + "@gmail.com";
+    String newuserpassword = Utilities.generateRandomString(30);
+    String firstname = Utilities.generateRandomString(7);
+    String lastname = Utilities.generateRandomString(7);
+    String company = Utilities.generateRandomString(7);
+    String address = Utilities.generateRandomString(7);
+    String state = Utilities.generateRandomString(7);
+    String city = Utilities.generateRandomString(7);
+    String zip = Utilities.generateRandomString(4);
+    String number = Utilities.generateRandomString(9);
+
+
     @BeforeMethod
     public void setupTest() {
         homePageActions = new HomePageActions(driver);
@@ -28,7 +44,8 @@ public class DownloadInvoice  extends TestBase {
         navbarActions =new NavBarActions(driver);
         cartPageActions = new CartPageActions(driver);
         signUpLoginActions = new SingUPLoginActions(driver);
-
+        orderPageActions = new OrderPageActions(driver);
+        driver.manage().window().maximize();
     }
     public void navigateToUrl() {
         homePageActions.navigateToHomePage(url);
@@ -36,32 +53,65 @@ public class DownloadInvoice  extends TestBase {
 @Test
     public void downloadInvoiceTest()
 {
-    // Step 1: Navigate to the URL
+    //  Navigate to the URL
     navigateToUrl();
 
-    // Step 2: Verify the homepage is visible
+    //  Verify the homepage is visible
     homePageActions.validateHomePageTitleIsDisplayed();
-    // Step 3: Click 'Products' button
+    //  Click 'Products' button
     addProductActions.clickProductsButton();
-    // Step 4: Hover over first product and click 'Add to cart'
+    //  Hover over first product and click 'Add to cart'
     addProductActions.AddFirstProductToCart();
-    // Step 5: Click 'Continue Shopping'
+    //  Click 'Continue Shopping'
     addProductActions.clickContinueShopping();
     navbarActions.clickCartButton();
-    //step 6: Verify that cart page is displayed
+    // Verify that cart page is displayed
     cartPageActions.validateCarPageIsDisplayed();
-    //step 7 : Click Proceed To Checkout
+    // Click Proceed To Checkout
     cartPageActions.clickProceedToCheckout();
-    //step 8 : Click 'Register / Login' button
+    // Click 'Register / Login' button
     signUpLoginActions.clickRegisterLogin();
-    //step 9: Fill all details in Signup and create account
-    String userName = Utilities.generateRandomString(7);
-    String email = Utilities.generateRandomString(7) + "@gmail.com";
-    signUpLoginActions.validateNewUserSignUpTitleIsDisplayed();
-   signUpLoginActions.enterSignUPNameInput(userName);
-   signUpLoginActions.enterSignUPEmailInput(email);
+    // Fill all details in Signup and create account
+    signUpLoginActions.enterSignUPNameInput(userName);
+    signUpLoginActions.enterSignUPEmailInput(email);
     signUpLoginActions.clickSignUpButton();
-    //step 10:  Verify 'ACCOUNT CREATED!' and click 'Continue' button
+    signUpLoginActions.chooseGenderMr();
+    signUpLoginActions.enterUserNewPassword(newuserpassword);
+    signUpLoginActions.selectDay();
+    signUpLoginActions.selectMonth();
+    signUpLoginActions.selectYear();
+    signUpLoginActions.fillFirstNamefield(firstname);
+    signUpLoginActions.fillLastNamefield(lastname);
+    signUpLoginActions.fillCompanyfield(company);
+    signUpLoginActions.fillAddressfield(address);
+    signUpLoginActions.selctCountry();
+    signUpLoginActions.fillStatefield(state);
+    signUpLoginActions.fillCityfield(city);
+    signUpLoginActions.fillZipCodefield(zip);
+    signUpLoginActions.fillMobilePhonefield(number);
+    signUpLoginActions.clickCreateAccountButton();
+    //Verify 'ACCOUNT CREATED!' and click 'Continue' button
+    signUpLoginActions.checkaccountcreatedIsDisplayed();
+    signUpLoginActions.checkcontinuebutton();
+    // Verify ' Logged in as username' at top
+    signUpLoginActions.checkuserloginIsDisplayed();
+    // Click 'Cart' button
+    homePageActions.clickCartButton();
+    //Click 'Proceed To Checkout' button
+    cartPageActions.clickProceedToCheckout();
+
+    // Place Order
+  orderPageActions.enterOrderComment("Please deliver as soon as possible.");
+    orderPageActions.clickPlaceOrder();
+
+    cartPageActions.enterPaymentDetails("Ahmed Medhat", "1234567812345678", "123", "12", "2025");
+      cartPageActions.clickPayAndConfirmOrder();
+      cartPageActions.verifySuccessMessage();
+      cartPageActions.clickDownloadInvoice();
+      cartPageActions.clickContinue();
+      cartPageActions.clickDeleteAccount();
+      cartPageActions.verifyAccountDeleted();
+      cartPageActions.clickContinue();
 
     }
 
