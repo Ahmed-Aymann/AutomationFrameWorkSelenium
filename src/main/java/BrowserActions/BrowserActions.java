@@ -52,5 +52,4 @@ public class BrowserActions {
         Alert alert = driver.switchTo().alert(); // Switch to the alert
         alert.accept(); // Accept the alert
     }
-
 }
