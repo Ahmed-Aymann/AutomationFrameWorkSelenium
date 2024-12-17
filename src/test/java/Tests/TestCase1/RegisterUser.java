@@ -33,11 +33,23 @@ public class RegisterUser extends TestBase {
         NavigateToUrl();
         String userName = Utilities.generateRandomString(7);
         String email = Utilities.generateRandomString(7) + "@gmail.com";
+
+
+
+
         homePageActions.validateHomePageTitleIsDisplayed();
         navBarActions.clickSignUpLoginButton();
         singUPLoginActions.validateNewUserSignUpTitleIsDisplayed();
         singUPLoginActions.enterSignUPNameInput(userName);
         singUPLoginActions.enterSignUPEmailInput(email);
         singUPLoginActions.clickSignUpButton();
+
+
+
+
+
+
+
+
     }
 }
