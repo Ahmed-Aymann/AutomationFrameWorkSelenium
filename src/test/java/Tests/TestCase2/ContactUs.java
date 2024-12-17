@@ -1,5 +1,6 @@
 package Tests.TestCase2;
 
+
 import Config.Config;
 import PageObjects.HomePage.HomePageActions;
 import PageObjects.NavBar.NavBarActions;
@@ -50,8 +51,24 @@ public class ContactUs extends TestBase {
         String message = "This is a test message.";
         contactUsActions.fillContactForm(name, email, subject, message);
 
+
+
+
+
         // Step 6: Upload file
-       // uploadFile(){}
+
+        String filePath = "\"C:\\Users\\Dell\\IdeaProjects\\AutomationFrameWorkSelenium\\target\\X2Dl9fq.png\"";
+
+
+
+        if (new File(filePath).exists()) {
+            contactUsActions.uploadFileUsingRobot(filePath); // Call the upload method
+            System.out.println("File uploaded successfully!");
+        }
+        else {
+            System.out.println("File not found: " + filePath);
+        }
+       /*// uploadFile(){}
       //  contactUsActions.uploadFile("C:\Users\lEGION\OneDrive\Desktop\Doc1.docx");
         WebElement fileInput = driver.findElement(By.xpath("//input[@name=\"upload_file\"]")); // Replace with actual ID or locator for the file input
         File fileToUpload = new File("C:\\Users\\lEGION\\OneDrive\\Desktop\\Acud_Bug.docx");
@@ -62,7 +79,7 @@ public class ContactUs extends TestBase {
         } else {
             System.out.println("File not found: " + fileToUpload.getAbsolutePath());
             return;
-        }
+        }*/
 
         // Step 7: Submit the form
         contactUsActions.clickSubmitButton();

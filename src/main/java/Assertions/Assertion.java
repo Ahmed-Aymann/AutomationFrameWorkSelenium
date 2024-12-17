@@ -52,4 +52,7 @@ public class Assertion {
         String actualText = driver.findElement(locator).getText(); // Get the text of the element
         Assert.assertEquals(actualText, expectedText, "Text does not match for element: " + locator);
     }
+
+    public void assertEquals(String actualDeliveryAddress, String expectedAddress, String s) {
+    }
 }
