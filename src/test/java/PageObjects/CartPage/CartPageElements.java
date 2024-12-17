@@ -12,6 +12,15 @@ public class CartPageElements {
     By CART_INFO=By.xpath("//div[@id='cart_info']");
 
 
+    //cart page elements when Proceed To Checkout
+    By COMMENT_BOX=By.xpath("//textarea[@class='form-control']");
+    By PROCEED_TO_CHECKOUT_BUTTON=By.xpath("//a[@class='btn btn-default check_out']");
+    By ADDRESS_DETAILS_TITLE=By.xpath("/html/body/section/div/div[2]/h2");
+    By ADDRESS_DETAILS_ROW=By.xpath("//div[@class='checkout-information']");
+    By YOUR_ORDER=By.xpath("//div[@id='cart_info']");
+
+
+
 
 
     /*

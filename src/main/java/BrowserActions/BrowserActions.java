@@ -40,6 +40,15 @@ public class BrowserActions {
         element.sendKeys(text);
     }
 
+    //for typing number in a field
+
+    public void typeinteger(By locator, int number) {
+        WebElement element = waitUntilElementIsReady(locator);
+        element.click();
+        element.clear();
+        element.sendKeys(number);
+    }
+
     public String getText(By locator) {
         WebElement element = waitUntilElementIsReady(locator);
         return element.getText();

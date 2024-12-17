@@ -30,4 +30,13 @@ public class NavBarActions extends NavBarElements {
         browserActions.click(PRODUCTS_BUTTON);
     }
 
+    // CLICKON DELETE ACCOUNT BUTTON
+    public void clickDeleteAccountButton(){
+        browserActions.click(DELETE_ACCOUNT_BUTTON);
+    }
+
+
+
+
+
 }
