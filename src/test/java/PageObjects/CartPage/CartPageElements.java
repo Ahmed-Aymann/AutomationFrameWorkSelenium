@@ -14,10 +14,22 @@ public class CartPageElements {
 
     //cart page elements when Proceed To Checkout
     By COMMENT_BOX=By.xpath("//textarea[@class='form-control']");
-    By PROCEED_TO_CHECKOUT_BUTTON=By.xpath("//a[@class='btn btn-default check_out']");
+    By PLACE_ORDER_BUTTON=By.xpath("//a[@href='/payment']");
+    By PROCEED_TO_CHECKOUT_BUTTON=By.xpath("//div[@class='col-sm-6']/a");
     By ADDRESS_DETAILS_TITLE=By.xpath("/html/body/section/div/div[2]/h2");
     By ADDRESS_DETAILS_ROW=By.xpath("//div[@class='checkout-information']");
     By YOUR_ORDER=By.xpath("//div[@id='cart_info']");
+
+
+
+
+    //checkout window that popout when u try to procedout without signup or login
+
+    By REGISTER_LOGIN_BUTTON=By.xpath("//a[@href='/login']/u");
+
+
+
+
 
 
 

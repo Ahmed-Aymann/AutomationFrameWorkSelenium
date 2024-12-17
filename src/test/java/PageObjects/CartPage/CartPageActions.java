@@ -55,15 +55,30 @@ public class CartPageActions extends CartPageElements{
     }
 
 
-    //validate clickon placeholder button
+    //validate clickon  PROCEED TO CHECKOUT button
     public void clickProceedToCheckoutButton() {
         browserActions.click(PROCEED_TO_CHECKOUT_BUTTON);
     }
+
+    //VALIDATE CLICKING ON PLACE ORDER BUTTON
+    public void clickPlaceOrderButton() {
+        browserActions.click(PLACE_ORDER_BUTTON);
+    }
+
+
+
 
     //enter text in the comment box
     public void enterComment(String comment) {
         browserActions.type(COMMENT_BOX, comment);
     }
+
+    // click on register_login button in the checkout window
+
+    public void clickRegisterLoginButton() {
+        browserActions.click(REGISTER_LOGIN_BUTTON);
+    }
+
 
 
 

@@ -14,7 +14,9 @@ public class VerifyProductElements {
     By quantityInput = By.xpath("//input[@id='quantity']");
     By addToCartButton = By.xpath("//button[@class='btn btn-default cart']");
     By viewCartButton = By.xpath("//p[@class='text-center']//a[@href='/view_cart']\n");
-    By CONTINUE_SHOPPING_BUTTON =By.xpath("//button[@class='btn btn-success close-modal btn-block']");
+
+    // button for continue shopping
+    By CONTINUE_SHOPPING_BUTTON =By.xpath("//div[@class='modal-footer']/button");
 
     // Locators for cart verification
     By cartProductQuantity = By.xpath("//td[@class='cart_quantity']//button");
