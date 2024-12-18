@@ -110,7 +110,7 @@ public class DownloadInvoice  extends TestBase {
       cartPageActions.clickDownloadInvoice();
       cartPageActions.clickContinue();
       cartPageActions.clickDeleteAccount();
-      cartPageActions.verifyAccountDeleted();
+
       cartPageActions.clickContinue();
 
     }

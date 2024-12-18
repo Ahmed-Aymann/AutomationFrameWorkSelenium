@@ -87,10 +87,7 @@ public class CartPageActions extends CartPageElements{
         browserActions.click(deleteAccountButton);
     }
 
-    // Verify Account Deleted Message
-    public void verifyAccountDeleted() {
 
-    }
 
 
 
