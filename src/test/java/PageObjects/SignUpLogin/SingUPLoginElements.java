@@ -10,10 +10,7 @@ public class SingUPLoginElements {
 
     //try dynamic
     By ChooseGenderMr =By.xpath("//input[@id='id_gender1']");
-   // By ChooseGenderMrs =By.xpath("//input[@id='id_gender2']");
-    //
-   // By UserNewName =By.xpath("//input[@data-qa='name']");
-  //  By UserNewEmail =By.xpath("//input[@data-qa='email']");
+
     By UserNewPassword =By.xpath("//input[@data-qa='password']");
     //create dynamic
     By SelectDay =By.xpath("//select[@data-qa='days']/option[text()='3']");
@@ -33,5 +30,6 @@ public class SingUPLoginElements {
     By Checkaccountcreated=By.xpath("//h2[@class='title text-center']/b");
     By Checkcontinuebutton=By.xpath("//a[@data-qa='continue-button']");
     By Checkuserlogin=By.xpath("//i[@class='fa fa-user']");
+    By Checkaccountdeleted=By.xpath("//h2[@data-qa=\"account-deleted\"]/b");
 }
 
