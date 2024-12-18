@@ -17,6 +17,7 @@ public class BrowserActions {
     public BrowserActions(WebDriver driver) {
         this.driver = driver;
     }
+    //s
 
     public WebElement waitUntilElementIsReady(By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIME));
